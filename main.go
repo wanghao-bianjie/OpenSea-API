@@ -27,28 +27,16 @@ func main() {
 		})
 	})
 
-	//type metaData struct {
-	//	image            string
-	//	image_data       string
-	//	external_url     string
-	//	description      string
-	//	name             string
-	//	attributes       string
-	//	background_color string
-	//	animation_url    string
-	//	youtube_url      string
-	//}
-	//m := make(map[string]metaData)
 	r.GET("/api/:token_id", func(c *gin.Context) {
 		tokenId := c.Param("token_id")
 		switch tokenId {
 		case "1":
 			c.JSON(http.StatusOK, gin.H{
-				"name":         "Mid-Autumn Festival",
-				"description":  "Holiday soon...",
-				"external_url": "https://www.baidu.com/",
-				"image":        "https://img1.baidu.com/it/u=1228507199,1542939359&fm=26&fmt=auto&gp=0.jpg",
-				//"animation_url": "http://vjs.zencdn.net/v/oceans.mp4",
+				"name":          "Mid-Autumn Festival",
+				"description":   "Holiday soon...",
+				"external_url":  "https://www.baidu.com/",
+				"image":         "https://img1.baidu.com/it/u=1228507199,1542939359&fm=26&fmt=auto&gp=0.jpg",
+				"animation_url": "http://vjs.zencdn.net/v/oceans.mp4",
 				"attributes": []gin.H{
 					{
 						"trait_type": "历法",
@@ -71,10 +59,10 @@ func main() {
 			break
 		case "2":
 			c.JSON(http.StatusOK, gin.H{
-				"name":             "Walking",
-				"description":      "The man is walking",
-				"external_url":     "https://www.taobao.com/",
-				"image":            "https://img2.baidu.com/it/u=363177954,2709021080&fm=26&fmt=auto&gp=0.jpg",
+				"name":         "Walking",
+				"description":  "The man is walking",
+				"external_url": "https://www.taobao.com/",
+				//"image":            "https://img2.baidu.com/it/u=363177954,2709021080&fm=26&fmt=auto&gp=0.jpg",
 				"background_color": "FFFFFF",
 				"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
 				"youtube_url":      "https://www.youtube.com/watch?v=UCxA8sDltMY",
