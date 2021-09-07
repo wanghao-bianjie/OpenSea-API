@@ -59,10 +59,10 @@ func main() {
 			break
 		case "2":
 			c.JSON(http.StatusOK, gin.H{
-				"name":         "Walking",
-				"description":  "The man is walking",
-				"external_url": "https://www.taobao.com/",
-				//"image":            "https://img2.baidu.com/it/u=363177954,2709021080&fm=26&fmt=auto&gp=0.jpg",
+				"name":             "Walking",
+				"description":      "The man is walking",
+				"external_url":     "https://www.taobao.com/",
+				"image":            "https://img2.baidu.com/it/u=363177954,2709021080&fm=26&fmt=auto&gp=0.jpg",
 				"background_color": "FFFFFF",
 				"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
 				"youtube_url":      "https://www.youtube.com/watch?v=UCxA8sDltMY",
@@ -120,7 +120,7 @@ func main() {
 				"description":      "龙珠孙悟空",
 				"external_url":     "https://www.taobao.com/",
 				"image":            "https://img.cppng.com/download/2020-06/20414-7-goku-transparent-picture.png",
-				"background_color": "FFFFFF",
+				"background_color": "000000",
 				//"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
 				"youtube_url": "https://www.youtube.com/watch?v=UCxA8sDltMY",
 				"attributes": []gin.H{
