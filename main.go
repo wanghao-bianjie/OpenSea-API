@@ -44,10 +44,11 @@ func main() {
 		switch tokenId {
 		case "1":
 			c.JSON(http.StatusOK, gin.H{
+				"name":         "Mid-Autumn Festival",
 				"description":  "Holiday soon...",
 				"external_url": "https://www.baidu.com/",
 				"image":        "https://img1.baidu.com/it/u=1228507199,1542939359&fm=26&fmt=auto&gp=0.jpg",
-				"name":         "Mid-Autumn Festival",
+				//"animation_url": "http://vjs.zencdn.net/v/oceans.mp4",
 				"attributes": []gin.H{
 					{
 						"trait_type": "历法",
@@ -70,10 +71,59 @@ func main() {
 			break
 		case "2":
 			c.JSON(http.StatusOK, gin.H{
-				"description":  "The man is walking",
-				"external_url": "https://www.taobao.com/",
-				"image":        "https://img2.baidu.com/it/u=363177954,2709021080&fm=26&fmt=auto&gp=0.jpg",
-				"name":         "Walking",
+				"name":             "Walking",
+				"description":      "The man is walking",
+				"external_url":     "https://www.taobao.com/",
+				"image":            "https://img2.baidu.com/it/u=363177954,2709021080&fm=26&fmt=auto&gp=0.jpg",
+				"background_color": "FFFFFF",
+				"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+				"youtube_url":      "https://www.youtube.com/watch?v=UCxA8sDltMY",
+				"attributes": []gin.H{
+					{
+						"trait_type": "天气",
+						"value":      "晴",
+					},
+					{
+						"trait_type": "颜色",
+						"value":      "白色",
+					},
+					{
+						"trait_type": "季节",
+						"value":      "秋天",
+					},
+					{
+						"trait_type": "等级",
+						"value":      1,
+						"max_value":  30,
+					},
+					{
+						"trait_type": "攻击力",
+						"value":      100.5,
+					},
+					{
+						"display_type": "number",
+						"trait_type":   "排名",
+						"value":        3,
+					},
+					{
+						"display_type": "boost_percentage",
+						"trait_type":   "占比",
+						"value":        77.7,
+					},
+					{
+						"display_type": "boost_number",
+						"trait_type":   "速度 km/h",
+						"value":        60,
+					},
+					{
+						"display_type": "date",
+						"trait_type":   "生日",
+						"value":        time.Now().Unix(),
+					},
+					{
+						"value": "没有设置trait_type",
+					},
+				},
 			})
 			break
 		default:
