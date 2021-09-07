@@ -114,6 +114,64 @@ func main() {
 				},
 			})
 			break
+		case "3":
+			c.JSON(http.StatusOK, gin.H{
+				"name":             "孙悟空",
+				"description":      "龙珠孙悟空",
+				"external_url":     "https://www.taobao.com/",
+				"image":            "https://img.cppng.com/download/2020-06/20414-7-goku-transparent-picture.png",
+				"background_color": "FFFFFF",
+				//"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+				"youtube_url": "https://www.youtube.com/watch?v=UCxA8sDltMY",
+				"attributes": []gin.H{
+					{
+						"trait_type": "国家",
+						"value":      "日本",
+					},
+					{
+						"trait_type": "动画",
+						"value":      "龙珠",
+					},
+					{
+						"trait_type": "性别",
+						"value":      "男",
+					},
+					{
+						"trait_type": "战斗力",
+						"value":      9999,
+						"max_value":  10000,
+					},
+					{
+						"trait_type": "护甲",
+						"value":      66,
+					},
+					{
+						"display_type": "number",
+						"trait_type":   "排名",
+						"value":        1,
+						"max_value":    100,
+					},
+					{
+						"display_type": "boost_percentage",
+						"trait_type":   "受欢迎占比",
+						"value":        88.8,
+					},
+					{
+						"display_type": "boost_number",
+						"trait_type":   "移动速度 km/h",
+						"value":        120,
+					},
+					{
+						"display_type": "date",
+						"trait_type":   "生日",
+						"value":        time.Now().Unix(),
+					},
+					{
+						"value": 777,
+					},
+				},
+			})
+			break
 		default:
 			c.JSON(http.StatusOK, gin.H{
 				"description":  "nothing to show ",
