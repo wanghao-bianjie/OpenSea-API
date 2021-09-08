@@ -120,7 +120,7 @@ func main() {
 				"description":      "龙珠孙悟空",
 				"external_url":     "https://www.taobao.com/",
 				"image":            "https://img.cppng.com/download/2020-06/20414-7-goku-transparent-picture.png",
-				"background_color": "000000",
+				"background_color": "FFFFFF",
 				//"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
 				"youtube_url": "https://www.youtube.com/watch?v=UCxA8sDltMY",
 				"attributes": []gin.H{
@@ -168,6 +168,116 @@ func main() {
 					},
 					{
 						"value": 777,
+					},
+				},
+			})
+			break
+		case "4":
+			c.JSON(http.StatusOK, gin.H{
+				"name":             "布欧",
+				"description":      "龙珠布欧",
+				"external_url":     "https://www.taobao.com/",
+				"image":            "https://img2.baidu.com/it/u=2960282707,3861898616&fm=26&fmt=auto&gp=0.jpg",
+				"background_color": "FFFFFF",
+				//"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+				//"youtube_url": "https://www.youtube.com/watch?v=UCxA8sDltMY",
+				"attributes": []gin.H{
+					{
+						"trait_type": "国家",
+						"value":      "日本",
+					},
+					{
+						"trait_type": "动画",
+						"value":      "龙珠",
+					},
+					{
+						"trait_type": "性别",
+						"value":      "男",
+					},
+					{
+						"trait_type": "战斗力",
+						"value":      8888,
+						"max_value":  10000,
+					},
+					{
+						"trait_type": "护甲",
+						"value":      77,
+					},
+					{
+						"display_type": "number",
+						"trait_type":   "排名",
+						"value":        2,
+						"max_value":    100,
+					},
+					{
+						"display_type": "boost_percentage",
+						"trait_type":   "受欢迎占比",
+						"value":        66.6,
+					},
+					{
+						"display_type": "boost_number",
+						"trait_type":   "移动速度 km/h",
+						"value":        115,
+					},
+					{
+						"display_type": "date",
+						"trait_type":   "生日",
+						"value":        time.Now().Unix(),
+					},
+				},
+			})
+			break
+		case "5":
+			c.JSON(http.StatusOK, gin.H{
+				"name":             "人造人18号",
+				"description":      "龙珠人造人18号",
+				"external_url":     "https://www.taobao.com/",
+				"image":            "https://img2.baidu.com/it/u=4063123354,1403985731&fm=26&fmt=auto&gp=0.jpg",
+				"background_color": "FFFFFF",
+				//"animation_url":    "http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4",
+				//"youtube_url": "https://www.youtube.com/watch?v=UCxA8sDltMY",
+				"attributes": []gin.H{
+					{
+						"trait_type": "国家",
+						"value":      "日本",
+					},
+					{
+						"trait_type": "动画",
+						"value":      "龙珠",
+					},
+					{
+						"trait_type": "性别",
+						"value":      "女",
+					},
+					{
+						"trait_type": "战斗力",
+						"value":      5678,
+						"max_value":  10000,
+					},
+					{
+						"trait_type": "护甲",
+						"value":      20,
+					},
+					{
+						"display_type": "number",
+						"trait_type":   "排名",
+						"value":        4,
+						"max_value":    100,
+					},
+					{
+						"display_type": "boost_percentage",
+						"trait_type":   "受欢迎占比",
+						"value":        98.7,
+					},
+					{
+						"display_type": "boost_number",
+						"trait_type":   "移动速度 km/h",
+						"value":        99,
+					},
+					{
+						"display_type": "date",
+						"trait_type":   "生日",
+						"value":        time.Now().Unix(),
 					},
 				},
 			})
