@@ -27,6 +27,17 @@ func main() {
 		})
 	})
 
+	r.GET("/api/contract", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"name":                    "collection-1155",
+			"description":             "这里是 ERC-1155 的集合的描述。。。",
+			"image":                   "https://img0.baidu.com/it/u=2555070557,2516571774&fm=253&fmt=auto&app=120&f=PNG?w=503&h=485",
+			"external_link":           "https://eips.ethereum.org/EIPS/eip-1155",
+			"seller_fee_basis_points": 111,                                          // # Indicates a 1.11% seller fee.(x/10000)
+			"fee_recipient":           "0x5fbca2ed2040924f65133A25194eeEBd45864f24", // # Where seller fees will be paid to.
+		})
+	})
+
 	r.GET("/api/:token_id", func(c *gin.Context) {
 		tokenId := c.Param("token_id")
 		switch tokenId {
