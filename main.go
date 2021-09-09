@@ -37,6 +37,16 @@ func main() {
 			"fee_recipient":           "0x5fbca2ed2040924f65133A25194eeEBd45864f24", // # Where seller fees will be paid to.
 		})
 	})
+	r.GET("/api/contract-1", func(c *gin.Context) {
+		c.JSON(http.StatusOK, gin.H{
+			"name":                    "collection-1155-0909",
+			"description":             "这里是 ERC-1155 的集合的描述，我是合约的 contractURI 中配置的接口返回的数据。。。",
+			"image":                   "https://thehustle.co/wp-content/uploads/2021/07/News-Brief_2021-07-23T014014.791Z.jpg",
+			"external_link":           "https://eips.ethereum.org/EIPS/eip-1155",
+			"seller_fee_basis_points": 750,                                          // # Indicates a 1.11% seller fee.(x/10000)
+			"fee_recipient":           "0x5fbca2ed2040924f65133A25194eeEBd45864f24", // # Where seller fees will be paid to.
+		})
+	})
 
 	r.GET("/api/:token_id", func(c *gin.Context) {
 		tokenId := c.Param("token_id")
