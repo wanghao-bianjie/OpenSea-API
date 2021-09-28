@@ -27,7 +27,7 @@ func main() {
 		})
 	})
 
-	r.GET("/api/contract", func(c *gin.Context) {	//test1
+	r.GET("/api/contract", func(c *gin.Context) {	//test1 test3
 		c.JSON(http.StatusOK, gin.H{
 			"name":                    "collection-1155",
 			"description":             "这里是 ERC-1155 的集合的描述。。。",
